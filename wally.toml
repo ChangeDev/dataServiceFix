@@ -1,7 +1,7 @@
 [package]
-name = "leifstout/dataservice"
-description = "Data handler and replication"
-version = "1.0.0"
+name = "changedev/dataservicefix"
+description = "Data handler and replication (Fork of leifstout's)"
+version = "1.0.1"
 license = "MIT"
 authors = ["Leif Stout <leifstout@gmail.com>"]
 registry = "https://github.com/UpliftGames/wally-index"

@@ -40,6 +40,11 @@ local DataServiceClient = {
 	:::
 ]=]
 function DataServiceClient.init(self: DataServiceClient, data: any?)
+	if self.networker then
+		self:waitForData()
+		return
+	end
+
 	self.networker = Networker.client.new("DataService", self)
 
 	if data then
@@ -281,7 +286,10 @@ function DataServiceClient.waitForData(self: DataServiceClient): any
 end
 
 function DataServiceClient._initData(self: DataServiceClient, data: any): ()
-	assert(self._data == nil, "DataServiceClient: Data already initialized")
+	if self._data ~= nil then
+		return
+	end
+
 	self._data = Data.new(data)
 	waitSignal:Fire()
 end

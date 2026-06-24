@@ -392,8 +392,7 @@ end
 	Asynchronously retrieves the profile for the given user ID using internal ProfileStore.
 ]=]
 function DataServiceServer.asyncGetProfile(self: DataServiceServer, userId: number | string): Profile?
-	local profileKey = DATA_PREFIX .. tostring(userId)
-	return self.playerStore:GetAsync(profileKey)
+	return self.playerStore:GetAsync(self:_getProfileKey(userId))
 end
 
 function DataServiceServer._initPlayer(self: DataServiceServer, player: Player, data: any): ()
