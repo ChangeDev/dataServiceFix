@@ -5,7 +5,7 @@ Persistent, auto-replicated, and observable player data for Roblox Luau.
 This is a fork of [leifstout's DataService](https://github.com/leifstout/dataService) with bug fixes applied. If you wish to use this version, use:
 
 ```
-changedev/dataService@1.0.0
+changedev/dataservice@1.0.0
 ```
 
 ## Documentation
